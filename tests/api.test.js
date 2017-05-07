@@ -40,14 +40,23 @@ describe('errorHandler', () => {
 })
 
 describe('list api', () => {
-  test('list documents and paginate', () => {
+  test('list documents', () => {
     const res = { send: (result) => result }
+    const req = { query: {} }
 
-    return list(null, res).then(result => {
+    return list(req, res).then(result => {
       expect(result.docs).toHaveLength(2)
+    })
+  })
+
+  test('list with paginatation', () => {
+    const res = { send: (result) => result }
+    const req = { query: { page: '2' } }
+
+    return list(req, res).then(result => {
       expect(result.total).toBe(2)
       expect(result.limit).toBe(10)
-      expect(result.page).toBe(1)
+      expect(result.page).toBe(2)
     })
   })
 })
@@ -99,8 +108,9 @@ describe('show api', () => {
 
   test('show a document with good id', () => {
     const res = { send: (result) => result }
+    const req = { query: {} }
 
-    return list(null, res).then(result => {
+    return list(req, res).then(result => {
       const id = result.docs[0]._id
       const req = { params: { id } }
       return show(req, res).then(result => {
@@ -127,8 +137,9 @@ describe('update api', () => {
 
   test('update a document with good id and wrong format', () => {
     const res = { send: (result) => result }
+    const req = { query: {} }
 
-    return list(null, res).then(result => {
+    return list(req, res).then(result => {
       const id = result.docs[0]._id
       const req = { params: { id }, body: {age: 'wrong age'} }
       return update(req, res).then(result => {
@@ -139,8 +150,9 @@ describe('update api', () => {
 
   test('update a document with good id and good format', () => {
     const res = { send: (result) => result }
+    const req = { query: {} }
 
-    return list(null, res).then(result => {
+    return list(req, res).then(result => {
       const id = result.docs[0]._id
       const req = { params: { id }, body: {age: 5} }
       return update(req, res).then(result => {
@@ -169,8 +181,9 @@ describe('remove api', () => {
 
   test('remove a document with good id', () => {
     const res = { send: (result) => result }
+    const req = { query: {} }
 
-    return list(null, res).then(result => {
+    return list(req, res).then(result => {
       const id = result.docs[0]._id
       const req = { params: { id } }
       return remove(req, res).then(result => {

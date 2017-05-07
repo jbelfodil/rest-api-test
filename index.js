@@ -13,8 +13,10 @@ const server = restify.createServer({
   version: '1.0.0'
 })
 
+// server plugins
 server.pre(restify.pre.sanitizePath())
 server.use(restify.bodyParser())
+server.use(restify.queryParser({ mapParams: false }))
 
 // API routes
 server.get('/animals', list)

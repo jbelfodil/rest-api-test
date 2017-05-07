@@ -24,10 +24,11 @@ example:
 ```
 
 #### LIST
-List all animals:
+List all animals and paginate:
 
 * method: `GET`
 * path: `/animals`
+* param: `?page=2`
 
 #### SHOW
 Show one specific animal from his id:
