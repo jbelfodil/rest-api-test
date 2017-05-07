@@ -1,0 +1,14 @@
+[
+  {
+    "type": "dog",
+    "name": "luffy",
+    "picture": "http://picture.com/1",
+    "age": 2
+  },
+  {
+    "type": "cat",
+    "name": "jojo",
+    "picture": "http://picture.com/2",
+    "age": 3
+  }
+]
