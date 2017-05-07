@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 import {list, insert, show, update, remove} from './api'
 
 mongoose.Promise = bluebird
-console.log(`mongodb://${process.env.DB_USER}:${process.env.DB_PWD}@${process.env.DB_PATH}`);
+
 const MongoDBUrl = `mongodb://${process.env.DB_USER}:${process.env.DB_PWD}@${process.env.DB_PATH}`
 
 const server = restify.createServer({
