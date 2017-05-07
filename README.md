@@ -42,3 +42,17 @@ delete an animal:
 
 * method: `DELETE`
 * path: `/animals/:id`
+
+## Usage
+#### Installation
+
+```
+npm install
+```
+#### Configuration
+Create a `.env` file at the root and add: 
+```
+DB_PATH=1234.exempleDB.com:port/yourbase
+DB_USER=DB user
+DB_PWD=DB password
+```
