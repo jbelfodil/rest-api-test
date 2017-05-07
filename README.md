@@ -4,6 +4,25 @@ rest-api-test is a NodeJS Rest Api based on [Restify](https://github.com/restify
 ## CRUD
 Here you will manage a pet shop with some basic requests :
 
+#### MODEL
+```javascript
+{
+  type:    {type: String, required: true},
+  name:    {type: String, required: true},
+  age:     {type: Number, required: true},
+  picture: {type: String, required: true}
+}
+```
+example:
+```javascript
+{
+  type:    'dog',
+  name:    'Luffy',
+  age:     2,
+  picture: 'http://www.picture.com/2'
+}
+```
+
 #### LIST
 List all animals:
 
@@ -21,15 +40,6 @@ Insert one (or many) animals:
 
 * method: `POST`
 * path: `/animals/`
-* model: 
-```javascript
-{
-  type:    {type: String, required: true},
-  name:    {type: String, required: true},
-  age:     {type: Number, required: true},
-  picture: {type: String, required: true}
-}
-```
 
 #### UPDATE
 Update an animal:
