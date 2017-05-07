@@ -63,7 +63,7 @@ npm start
 ```
 
 #### Tests
-The application in tested with [Jest](https://facebook.github.io/jest/).
+The application is tested with [Jest](https://facebook.github.io/jest/).
 To launch the tests:
 ```
 npm run test
