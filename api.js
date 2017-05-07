@@ -16,7 +16,7 @@ const notFoundErrorHandler = (res) => {
 
 // retrieve and list all animals 10 by 10 with pagination
 const list = (req, res) => {
-  const page = req.query.page && parseInt(req.query.page)
+  const page = req.query.page && Math.abs(req.query.page)
   return Animal.paginate({}, { page: page || 1, limit: 10 })
     .then(results => res.send(results))
     .catch(err => internalErrorHandler('list', err, res))
