@@ -56,3 +56,15 @@ DB_PATH=1234.exempleDB.com:port/yourbase
 DB_USER=DB user
 DB_PWD=DB password
 ```
+
+#### Start
+```
+npm start
+```
+
+#### Tests
+The application in tested with [Jest](https://facebook.github.io/jest/).
+To launch the tests:
+```
+npm run test
+```
