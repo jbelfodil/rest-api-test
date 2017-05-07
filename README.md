@@ -60,7 +60,7 @@ delete an animal:
 npm install
 ```
 #### Configuration
-Create a `.env` file at the root and add: 
+Create a `.env` file at the root and add:
 ```
 DB_PATH=1234.exempleDB.com:port/yourbase
 DB_USER=DBuser

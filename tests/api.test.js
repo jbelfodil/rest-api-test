@@ -1,3 +1,8 @@
+
+// tests for all api.js functions
+// the mongoose connection is mocked by mockgoose
+// all the documents are managed in memory
+
 import bluebird from 'bluebird'
 import mongoose from 'mongoose'
 import Animal from './../models/animal'
