@@ -1,9 +1,9 @@
 import bluebird from 'bluebird'
 import mongoose from 'mongoose'
 import Animal from './../models/animal'
-import {list, insert, show, update, remove, internalErrorHandler, notFoundErrorHandler} from './../api'
 import {Mockgoose} from 'mockgoose'
 import data from './fakeData'
+import {list, insert, show, update, remove, internalErrorHandler, notFoundErrorHandler} from './../api'
 
 mongoose.Promise = bluebird
 const mockgoose = new Mockgoose(mongoose)
