@@ -53,8 +53,8 @@ npm install
 Create a `.env` file at the root and add: 
 ```
 DB_PATH=1234.exempleDB.com:port/yourbase
-DB_USER=DB user
-DB_PWD=DB password
+DB_USER=DBuser
+DB_PWD=DBpassword
 ```
 
 #### Start
@@ -67,4 +67,19 @@ The application is tested with [Jest](https://facebook.github.io/jest/).
 To launch the tests:
 ```
 npm run test
+```
+
+#### Docker
+The application can be build and run with [Docker](https://www.docker.com/):
+
+###### Build
+
+```
+docker build -t appName .
+```
+
+###### Run
+
+```
+docker run -d -p 8080:1337 --name appName -e DBPATH=1234.exempleDB.com:port/yourbase -e DB_USER=user -e DB_PWD=password appName
 ```
