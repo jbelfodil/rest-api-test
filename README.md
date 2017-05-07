@@ -7,11 +7,11 @@ Here you will manage a pet shop with some basic requests :
 #### LIST
 List all animals present in the database
 
-*Method: `GET`
-*PATH: `/animals`
+* Method: `GET`
+* PATH: `/animals`
 
 #### SHOW
 Show one specific animal from his id
 
-*Method: `GET`
-*PATH: `/animals/:id`
+* Method: `GET`
+* PATH: `/animals/:id`
