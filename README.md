@@ -94,3 +94,6 @@ docker build -t appName .
 ```
 docker run -d -p 8080:1337 --name appName -e DBPATH=1234.exempleDB.com:port/yourbase -e DB_USER=user -e DB_PWD=password appName
 ```
+
+#### Linter
+[StandardJS](https://standardjs.com/) with [ESLint](http://eslint.org/)
